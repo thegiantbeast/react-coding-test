@@ -1,0 +1,7 @@
+.Seat .Cards {
+  position: absolute;
+  top: -5px;
+  left: 75px;
+  width: 150px;
+  margin-left: -72px;
+}
