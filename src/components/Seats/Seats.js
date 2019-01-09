@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { find } from 'lodash-es';
+import find from 'lodash/find';
 import cx from 'classnames';
 
 import { seatShape } from '../../types';

@@ -8,10 +8,10 @@ export default {
   },
   seats: [
     { id: 0, state: 'available' },
-    { id: 1, state: 'occupied', username: 'Mario C', chips: 78450 },
+    { id: 1, state: 'occupied', username: 'MCA', chips: 78450 },
     { id: 2, state: 'available' },
-    { id: 3, state: 'occupied', username: 'Diamond Mike', chips: 57465 },
-    { id: 4, state: 'occupied', username: 'Adam', chips: 62860 },
+    { id: 3, state: 'occupied', username: 'Mike D', chips: 57465 },
+    { id: 4, state: 'occupied', username: 'Ad-Rock', chips: 62860 },
     { id: 5, state: 'available' },
   ],
   currentHand: {
