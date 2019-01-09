@@ -3,6 +3,7 @@ import cx from 'classnames';
 
 import { seatProps } from '../../types';
 import Cards from '../Cards';
+import Chips from '../Chips';
 import './Seat.css';
 
 const Seat = ({ id, state, username, chips, cards, bet }) => (
@@ -19,6 +20,7 @@ const Seat = ({ id, state, username, chips, cards, bet }) => (
         </div>
       )
     }
+    <Chips amount={bet} />
     <Cards values={cards} />
   </div>
 );
