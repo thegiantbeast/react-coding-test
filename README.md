@@ -2,7 +2,7 @@
 
 ## The test
 
-This is a work in progress version of our brand new poker client which we're all working on feverishly so we can replace our outdated Flash client.
+This is a work in progress version of our brand new poker client which we're all working on feverishly so we can replace our outdated Flash client. It's set up as a git repository, so any changes you make can be committed as you go.
 
 The system is currently loading the table state from a fixture, but the next story in the backlog is to connect it to a real API! The API isn't fully tested yet, so it's likely that there will be some teething troubles that need fixing or marking as TODOs in the process.
 
