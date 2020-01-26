@@ -8,7 +8,7 @@ import Pots from '../Pots';
 import './Table.css';
 
 const Table = ({ table }) => (
-  <div className="Table">
+  <div className={`Table ${table.game === 'omaha' ? 'Poker-omaha' : 'Poker'}`}>
     <div>
       <Seats seats={table.seats} players={table.currentHand.players} />
       <Cards values={table.currentHand.communityCards} />

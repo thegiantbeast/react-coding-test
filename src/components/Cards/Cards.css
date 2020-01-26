@@ -1,4 +1,4 @@
-.Seat .Cards {
+.Poker .Seat .Cards {
   position: absolute;
   top: -5px;
   left: 75px;
@@ -6,7 +6,23 @@
   margin-left: -72px;
 }
 
-.Table > * > .Cards {
+.Poker-omaha .Seat .Cards {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 300px;
+}
+
+.Poker-omaha .Seat-1 .Cards {
+  transform: translate(-60%, 0);
+}
+
+.Poker-omaha .Seat-4 .Cards {
+  transform: translate(-40%, 0);
+}
+
+.Table > div > .Cards {
   position: absolute;
   left: -185px;
   top: -5px;
