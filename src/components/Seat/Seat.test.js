@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import Seat from './Seat';
 import Chips from '../Chips';
@@ -36,12 +36,12 @@ describe('Seats', () => {
 
     it('shows the bet', () => {
       component = shallow(<Seat {...props} bet={1000} />);
-      expect(component.find(Chips).props()).toEqual({ amount: "1,000" });
+      expect(component.find(Chips).props()).toEqual({ amount: 1000 });
     });
 
     it('shows zero when no bet', () => {
       component = shallow(<Seat {...props} bet={0} />);
-      expect(component.find(Chips).props()).toEqual({ amount: "0" });
+      expect(component.find(Chips).props()).toEqual({ amount: 0 });
     });
 
     it('shows the hole cards', () => {

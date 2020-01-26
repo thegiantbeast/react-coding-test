@@ -6,17 +6,18 @@ import Cards from '../Cards';
 import Chips from '../Chips';
 import './Seat.css';
 
+import { formatNumber } from '../../utils'
+
 const Seat = ({ id, state, username, chips, cards, bet }) => {
-  const formattedBet = Intl.NumberFormat().format(bet || 0);
-  const formattedChips = Intl.NumberFormat().format(chips || 0);
+  const isSeatOccupied = state === 'occupied';
 
   return (
     <div className={cx('Seat', `Seat-${id}`)}>
       {
-        username ? (
+        isSeatOccupied ? (
           <div className="nameplate">
             <div className="username">{username}</div>
-            <div className="chips">{(bet > 0 && chips < 0) ? 'All-In' : formattedChips}</div>
+            <div className="chips">{(bet > 0 && chips < 0) ? 'All-In' : formatNumber(chips)}</div>
           </div>
         ) : (
           <div className="nameplate available">
@@ -24,7 +25,7 @@ const Seat = ({ id, state, username, chips, cards, bet }) => {
           </div>
         )
       }
-      <Chips amount={formattedBet} />
+      <Chips amount={bet} />
       <Cards values={cards} />
     </div>
   )
