@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import find from 'lodash/find';
 import cx from 'classnames';
 
-import { seatShape } from '../../types';
+import { seatShape, playerShape } from '../../types';
 
 import Seat from '../Seat';
 
@@ -15,6 +15,7 @@ const Seats = ({ seats, players }) => (
 
 Seats.propTypes = {
   seats: PropTypes.arrayOf(seatShape).isRequired,
+  players: PropTypes.arrayOf(playerShape).isRequired
 };
 
 export default Seats;
