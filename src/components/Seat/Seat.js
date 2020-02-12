@@ -8,7 +8,7 @@ import './Seat.css';
 
 import { formatNumber } from '../../utils'
 
-const Seat = ({ id, state, username, chips, cards, bet }) => {
+const Seat = ({ id, state, username, chips = 0, cards, bet = 0 }) => {
   const isSeatOccupied = state === 'occupied';
   const playerAllIn = bet > 0 && chips <= 0;
   const chipsValue = playerAllIn ? 'All-In' : formatNumber(chips);
