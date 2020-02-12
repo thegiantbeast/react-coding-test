@@ -10,6 +10,8 @@ import { formatNumber } from '../../utils'
 
 const Seat = ({ id, state, username, chips, cards, bet }) => {
   const isSeatOccupied = state === 'occupied';
+  const playerAllIn = bet > 0 && chips <= 0;
+  const chipsValue = playerAllIn ? 'All-In' : formatNumber(chips);
 
   return (
     <div className={cx('Seat', `Seat-${id}`)}>
@@ -17,7 +19,7 @@ const Seat = ({ id, state, username, chips, cards, bet }) => {
         isSeatOccupied ? (
           <div className="nameplate">
             <div className="username">{username}</div>
-            <div className="chips">{(bet > 0 && chips < 0) ? 'All-In' : formatNumber(chips)}</div>
+            <div className="chips">{chipsValue}</div>
           </div>
         ) : (
           <div className="nameplate available">

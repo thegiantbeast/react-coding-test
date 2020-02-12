@@ -25,11 +25,11 @@ describe('Seats', () => {
     });
 
     it('shows zero when no stack', () => {
-      component = shallow(<Seat {...props} chips={0} />);
+      component = shallow(<Seat {...props} bet={0} chips={0} />);
       expect(component.find('.chips').text()).toEqual('0')
     })
 
-    xit('shows All-In when the player has bet all of their chips', () => {
+    it('shows All-In when the player has bet all of their chips', () => {
       component = shallow(<Seat {...props} chips={0} />);
       expect(component.find('.chips').text()).toEqual('All-In')
     });
