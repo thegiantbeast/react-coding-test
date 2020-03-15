@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatNumber } from '../../utils';
 
 import './Chips.css';
 
@@ -8,7 +9,7 @@ const Chips = ({ amount }) => {
 
   return (
     <div className="Chips">
-      {amount}
+      {formatNumber(amount)}
     </div>
   );
 }
